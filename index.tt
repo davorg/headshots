@@ -149,7 +149,7 @@
 
           <div class="row row-cols-auto g-3">
 [% USE dir = Directory('docs/img');
-   FOREACH img = dir.files -%]
+   FOREACH img = dir.files.sort('name') -%]
             <div class="col">
               <div class="card" style="width: 18rem;">
                 <a href="img/[% img.name %]" class="thumbnail">
